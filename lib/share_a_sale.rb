@@ -51,4 +51,16 @@ module ShareASale
       RestClient.get(url, custom_headers)
     end
   end
+
+  class MockClient < Client
+    def request(action, options, date = Time.now)
+      MockRequest.new
+    end
+  end
+
+  class MockRequest < Request
+    def execute!
+    end
+  end
+
 end
