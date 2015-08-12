@@ -54,7 +54,7 @@ module ShareASale
 
   class MockClient < Client
     def request(action, options, date = Time.now)
-      MockRequest.new
+      MockRequest.new(merchant_id, token, api_secret, action, options, date)
     end
   end
 
