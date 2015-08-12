@@ -6,7 +6,7 @@ require 'rest-client'
 module ShareASale
   SHARE_A_SALE_HOST = "shareasale.com"
   SHARE_A_SALE_PATH = "/w.cfm"
-  SHARE_A_SALE_VERSION = "1.8"
+  SHARE_A_SALE_VERSION = "2.5"
 
   class Client < Struct.new(:merchant_id, :token, :api_secret)
     { banner_list: "bannerList", transaction_detail: "transactionDetail", reference: "reference" }.each do |method, api_action|
